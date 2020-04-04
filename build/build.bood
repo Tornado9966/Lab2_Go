@@ -8,3 +8,10 @@ go_binary {
   srcsExclude: ["**/*_test.go"]
 }
 
+archive_bin { 
+  name: "my-archive",
+  binary: ["bood"],
+
+  srcs: ["**/*.go", "../go.mod"],
+  srcsExclude: ["**/*_test.go"]
+}
