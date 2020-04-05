@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"github.com/google/blueprint"
 	"github.com/roman-mazur/bood"
-	bin "github.com/Iluysha/Lab2/build/binmodule"
+	bin "github.com/Tornado9966/Lab2_Go/build/binmodule"
 	"strings"
 	"testing"
 )

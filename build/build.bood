@@ -1,7 +1,7 @@
 go_binary { 
   name: "bood", 
   
-  pkg: "github.com/Tornado9966/Lab2_Go/build/cmd/bood", 
+  pkg: "github.com/Tornado9966/Lab2_Go/build/cmd/bood",
   testPkg: "./...",
 
   srcs: ["**/*.go", "../go.mod"],
