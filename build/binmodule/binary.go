@@ -34,11 +34,12 @@ type BinaryModule struct {
 	properties struct {
 		Pkg string
                 TestPkg string
+		OutTestFile string
 		Srcs []string
 		SrcsExclude []string
 		VendorFirst bool
 	}
-}
+} 
 
 func (bm *BinaryModule) GenerateBuildActions(ctx blueprint.ModuleContext) {
 	name := ctx.ModuleName()
@@ -46,7 +47,7 @@ func (bm *BinaryModule) GenerateBuildActions(ctx blueprint.ModuleContext) {
 	config.Debug.Printf("Adding build actions for go binary module '%s'", name)
 
 	outputPath := path.Join(config.BaseOutputDir, "bin", name)
-	outputFile := path.Join(config.BaseOutputDir, "bin", "test.txt")
+	outputFile := path.Join(config.BaseOutputDir, "bin", bm.properties.OutTestFile)
 
 	var inputs []string
 	inputErors := false

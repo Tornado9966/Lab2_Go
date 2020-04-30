@@ -14,7 +14,7 @@ var (
 	goArchive =  pctx.StaticRule("ziparchive", blueprint.RuleParams{
 
 		//You can use standard linux zip utility:
-		//Command:     "cd $workDir && zip -r -j $output $inputsZip",
+		//Command:     "cd $workDir && zip -r -j $output $inputsZip", 
 
 		//Using our own archivator:
 		Command:    "cd $workDir/cmd/archivate && go run archivate.go $output $inputsZip",

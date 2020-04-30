@@ -1,6 +1,6 @@
 === RUN   TestSimpleArchiveFactory
-DEBUG 2020/04/05 16:11:34 binary.go:46: Adding build actions for go binary module 'test-bin'
-DEBUG 2020/04/05 16:11:34 archive.go:43: Adding build actions for go binary module 'test-out'
+DEBUG 2020/04/30 15:24:16 binary.go:47: Adding build actions for go binary module 'test-bin'
+DEBUG 2020/04/30 15:24:16 archive.go:43: Adding build actions for go binary module 'test-out'
     TestSimpleArchiveFactory: archive_test.go:51: Gennerated ninja build file:
         # ******************************************************************************
         # ***            This file is generated and should not be edited             ***
@@ -50,12 +50,12 @@ DEBUG 2020/04/05 16:11:34 archive.go:43: Adding build actions for go binary modu
             workDir = .
         default out/bin/test-bin
         
-        build out/bin/test.txt: g.binmodule.gotest | test-src.go
+        build out/bin: g.binmodule.gotest | test-src.go
             description = Test my module
-            outputFile = out/bin/test.txt
+            outputFile = out/bin
             pkgTest = 
             workDir = .
-        default out/bin/test.txt
+        default out/bin
         
         # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
         # Module:  test-out
@@ -75,7 +75,7 @@ DEBUG 2020/04/05 16:11:34 archive.go:43: Adding build actions for go binary modu
 PASS
 ok  	github.com/Tornado9966/Lab2_Go/build/archmodule	(cached)
 === RUN   TestSimpleBinFactory
-DEBUG 2020/04/04 22:49:09 binary.go:46: Adding build actions for go binary module 'test-out'
+DEBUG 2020/04/30 15:24:16 binary.go:47: Adding build actions for go binary module 'test-out'
     TestSimpleBinFactory: binary_test.go:45: Gennerated ninja build file:
         # ******************************************************************************
         # ***            This file is generated and should not be edited             ***
@@ -119,12 +119,12 @@ DEBUG 2020/04/04 22:49:09 binary.go:46: Adding build actions for go binary modul
             workDir = .
         default out/bin/test-out
         
-        build out/bin/test.txt: g.binmodule.gotest | test-src.go
+        build out/bin: g.binmodule.gotest | test-src.go
             description = Test my module
-            outputFile = out/bin/test.txt
+            outputFile = out/bin
             pkgTest = 
             workDir = .
-        default out/bin/test.txt
+        default out/bin
         
 --- PASS: TestSimpleBinFactory (0.00s)
 PASS

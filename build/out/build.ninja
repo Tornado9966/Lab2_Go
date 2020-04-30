@@ -56,7 +56,7 @@ default out/bin/test.txt
 # Variant:
 # Type:    archive_bin
 # Factory: github.com/Tornado9966/Lab2_Go/build/archmodule.SimpleArchiveFactory
-# Defined: build.bood:11:1
+# Defined: build.bood:12:1
 
 build out/archives/my-archive.zip: g.archmodule.ziparchive | $
         archmodule/archive.go binmodule/binary.go cmd/archivate/archivate.go $
