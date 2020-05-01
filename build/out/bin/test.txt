@@ -1,6 +1,6 @@
 === RUN   TestSimpleArchiveFactory
-DEBUG 2020/04/30 15:24:16 binary.go:47: Adding build actions for go binary module 'test-bin'
-DEBUG 2020/04/30 15:24:16 archive.go:43: Adding build actions for go binary module 'test-out'
+DEBUG 2020/05/01 13:13:41 binary.go:47: Adding build actions for go binary module 'test-bin'
+DEBUG 2020/05/01 13:13:41 archive.go:43: Adding build actions for go binary module 'test-out'
     TestSimpleArchiveFactory: archive_test.go:51: Gennerated ninja build file:
         # ******************************************************************************
         # ***            This file is generated and should not be edited             ***
@@ -73,9 +73,9 @@ DEBUG 2020/04/30 15:24:16 archive.go:43: Adding build actions for go binary modu
         
 --- PASS: TestSimpleArchiveFactory (0.00s)
 PASS
-ok  	github.com/Tornado9966/Lab2_Go/build/archmodule	(cached)
+ok  	github.com/Tornado9966/Lab2_Go/build/archmodule	0.016s
 === RUN   TestSimpleBinFactory
-DEBUG 2020/04/30 15:24:16 binary.go:47: Adding build actions for go binary module 'test-out'
+DEBUG 2020/05/01 13:13:41 binary.go:47: Adding build actions for go binary module 'test-out'
     TestSimpleBinFactory: binary_test.go:45: Gennerated ninja build file:
         # ******************************************************************************
         # ***            This file is generated and should not be edited             ***
@@ -128,6 +128,6 @@ DEBUG 2020/04/30 15:24:16 binary.go:47: Adding build actions for go binary modul
         
 --- PASS: TestSimpleBinFactory (0.00s)
 PASS
-ok  	github.com/Tornado9966/Lab2_Go/build/binmodule	(cached)
+ok  	github.com/Tornado9966/Lab2_Go/build/binmodule	0.005s
 ?   	github.com/Tornado9966/Lab2_Go/build/cmd/archivate	[no test files]
 ?   	github.com/Tornado9966/Lab2_Go/build/cmd/bood	[no test files]
