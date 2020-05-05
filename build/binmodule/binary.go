@@ -37,6 +37,7 @@ type BinaryModule struct {
 		OutTestFile string
 		Srcs []string
 		SrcsExclude []string
+		Optional bool
 		VendorFirst bool
 	}
 } 
@@ -86,7 +87,7 @@ func (bm *BinaryModule) GenerateBuildActions(ctx blueprint.ModuleContext) {
 		inputs = append(inputs, vendorDirPath)
 	}
 
-	if(len(inputs) != 0) {
+	if(len(inputs) != 0) { 
 		ctx.Build(pctx, blueprint.BuildParams{
 			Description: fmt.Sprintf("Build %s as Go binary", name),
 			Rule:        goBuild,
@@ -105,13 +106,14 @@ func (bm *BinaryModule) GenerateBuildActions(ctx blueprint.ModuleContext) {
 		Rule:        goTest,
 		Outputs:     []string{outputFile},
 		Implicits:   inputsTest,
+		Optional:    bm.properties.Optional,
 		Args: map[string]string{
 			"outputFile":     outputFile,
 			"workDir":        ctx.ModuleDir(),
 			"pkgTest":        bm.properties.TestPkg,
 		},
 	})
-}
+} 
  
 func (bm *BinaryModule) Outputs() []string {
   	return []string{path.Join(config.BaseOutputDir, "bin", bm.Name())}
